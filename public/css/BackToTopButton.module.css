@@ -1,0 +1,24 @@
+.btt-btn {
+  position: absolute;
+  right: 0;
+  max-width: 120px;
+  margin: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-image: url("../images/shFlying1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .75rem;
+  padding: 1rem; }
+
+@media (max-width: 760px) {
+  .btt-btn {
+    padding: 0;
+    text-align: center;
+    bottom: 0;
+    max-width: 50px; } }
