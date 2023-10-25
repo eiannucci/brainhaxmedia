@@ -1,0 +1,49 @@
+.planet-container {
+  background-color: #b3cde0;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-image: url("https://cdn.pixabay.com/photo/2016/10/20/18/35/earth-1756274__480.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: top;
+  background-position-x: center;
+  overflow: hidden;
+  position: relative; }
+  .planet-container .planet-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+    font-family: "SpaceShipz";
+    font-size: 1rem;
+    letter-spacing: 0.25rem;
+    overflow-wrap: break-word; }
+  .planet-container .type-header {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    padding-right: 1rem; }
+  .planet-container .type-details {
+    color: #fff;
+    font-size: 1rem; }
+
+.planet-cards {
+  position: relative; }
+
+.planet-body-type,
+.planet-gravity,
+.planet-density {
+  margin-bottom: 5px; }
+
+@media (max-width: 768px) {
+  body {
+    background-size: contain; } }
+
+@media (min-width: 769px) {
+  .planet-name {
+    font-size: 2rem !important; }
+  .type-header {
+    font-size: 1.5rem !important; }
+  .type-details {
+    font-size: 1.5rem !important; } }
