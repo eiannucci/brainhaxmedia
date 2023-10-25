@@ -1,0 +1,6 @@
+.content-container {
+    /* add the height of navbar and the desired padding */
+    padding-top: calc(76px);
+    /* subtract the height of navbar and the padding from the viewport height */
+    min-height: calc(100vh - 76px - 1rem);
+  }

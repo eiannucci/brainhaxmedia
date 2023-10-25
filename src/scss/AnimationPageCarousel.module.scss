@@ -1,0 +1,25 @@
+.carousel-container {
+  background: rgb(94, 164, 239);
+  overflow: hidden;
+
+// div > div > div {
+//   height: 100vh;
+// }
+
+
+  .control-btns {
+    width: 100%;
+    background: rgb(0, 212, 255) !important;
+    background: -moz-linear-gradient(0deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 84%) !important;
+    background: -webkit-linear-gradient(0deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 84%) !important;
+    background: linear-gradient(0deg, rgba(0, 212, 255, 1) 0%, rgba(9, 9, 121, 1) 84%) !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00d4ff", endColorstr="#090979", GradientType=1) !important;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+}
