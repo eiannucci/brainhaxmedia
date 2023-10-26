@@ -45,7 +45,7 @@ export const BandStatsAPI = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={12} lg={3} className={styles["center-image-xs"]}>
+            <Col xs={12} className={styles["center-image-xs"]}>
               <img
                 onLoad={() => setLoading(false)}
                 src={item.album_cover}
@@ -82,19 +82,21 @@ export const BandStatsAPI = () => {
               </ul>
             </Col>
             <Col>
-  <h2>Highest Charted Song:</h2>
-  {item.highest_charted_song && (
-    <ul>
-      <li>Title: {item.highest_charted_song.title}</li>
-      <li>Album: {item.highest_charted_song.album}</li>
-      <li>Year: {item.highest_charted_song.year}</li>
-      {item.highest_charted_song.chart_peak && (
-        <li>Chart Peak (USA): {item.highest_charted_song.chart_peak.US}</li>
-      )}
-    </ul>
-  )}
-</Col>
-
+              <h2>Highest Charted Song:</h2>
+              {item.highest_charted_song && (
+                <ul>
+                  <li>Title: {item.highest_charted_song.title}</li>
+                  <li>Album: {item.highest_charted_song.album}</li>
+                  <li>Year: {item.highest_charted_song.year}</li>
+                  {item.highest_charted_song.chart_peak && (
+                    <li>
+                      Chart Peak (USA):{" "}
+                      {item.highest_charted_song.chart_peak.US}
+                    </li>
+                  )}
+                </ul>
+              )}
+            </Col>
           </Row>
         </Container>
       ))}
