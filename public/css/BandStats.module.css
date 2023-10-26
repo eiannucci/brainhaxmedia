@@ -9,6 +9,9 @@
   box-shadow: rgba(0, 0, 0, 0.75) 3px 10px 10px 0px, black 0px 0px 0px 1px; }
   .band-info-container .band-img {
     padding-bottom: 1rem; }
+  .band-info-container h1 {
+    font-family: 'Deathrock';
+    font-size: 4rem; }
   .band-info-container h2 {
     font-family: 'DeathRock';
     font-size: 4rem; }
@@ -17,4 +20,18 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 0; }
   .band-info-container ul {
-    padding-left: 0; }
+    padding-left: 1rem; }
+  .band-info-container .p-card {
+    padding: 1rem; }
+  .band-info-container .center-image-xs {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+@media (max-width: 575.98px) {
+  .center-image-xs {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .band-info-container {
+    border-radius: 0; } }
