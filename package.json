@@ -18,7 +18,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@use-gesture/react": "^10.2.26",
-    "axios": "^1.3.5",
+    "axios": "^1.5.1",
     "bootstrap": "^5.2.3",
     "brew": "^0.0.8",
     "classnames": "^2.3.2",
@@ -61,6 +61,8 @@
   "scripts": {
     "start": "set PORT=3000 && concurrently \"npm run sass\" \"react-scripts start\"",
     "build": "react-scripts build",
+    "includeApi": "cp -R ./src/api ./build/ && cp -R ./src/api ./public/",
+    "postbuild": "npm run includeApi",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "node-sass --watch src/scss -o public/css"
@@ -84,7 +86,11 @@
     ]
   },
   "devDependencies": {
+    "copy": "^0.3.2",
     "eslint": "^8.38.0",
-    "eslint-plugin-react": "^7.32.2"
+    "eslint-plugin-react": "^7.32.2",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "npm-run-all": "^4.1.5"
   }
 }
