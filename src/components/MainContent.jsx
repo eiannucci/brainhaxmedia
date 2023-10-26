@@ -15,9 +15,17 @@ let btnList = [
   {
     img: "https://bracketfights.com/images/hero/2019/marvel-vs-dc-superheroes-16387/1616215860.jpg",
     title: "Super Search",
-    desc: "Find info & stats on almost any superhero known to man... or Superman...",
+    desc: "Find info & stats on almost any superhero known to man... or Superman",
     id: "SuperHeroSearch",
     firebadge: true,
+    image: true,
+  },
+  {
+    img: "https://townsquare.media/site/366/files/2020/12/90salbums.jpg",
+    title: "Band Stats",
+    desc: "An API I created from scratch to deliver you all the gritty details about your favorite bands.",
+    id: "BandStats",
+    firebadge: false,
     image: true,
   },
   {
@@ -31,7 +39,7 @@ let btnList = [
   {
     img: MultiCube,
     title: "The Multicube..",
-    desc: "Hover or drag over the small cubes. Could be implemented a number of ways, even as a navigation...",
+    desc: "Hover or drag over the small cubes. Could be implemented a number of ways, even as a navigation.",
     id: "Multicube",
     // oceanwaves: true,
     image: true,
@@ -53,25 +61,17 @@ let btnList = [
   {
     img: CubeWave,
     title: "Going wild with Greensock",
-    desc: "Testing out Greensock's versatility...",
+    desc: "Testing out Greensock's versatility.",
     id: "CubeWave",
     image: true,
   },
   {
     img: BannerImage,
     title: "Animated Banner Ads",
-    desc: "Examples of popular banner sizes found on the web...",
+    desc: "Examples of popular banner sizes found on the web.",
     id: "Banners",
     image: true,
-  },
-  {
-    img: "https://townsquare.media/site/366/files/2020/12/90salbums.jpg",
-    title: "Band Stats",
-    desc: "An API I created from scratch, hosted on Firebase, to deliver you all the gritty details about your favorite bands...",
-    id: "BandStats",
-    firebadge: false,
-    image: true,
-  },
+  }
 ];
 
 export const MainContent = () => {

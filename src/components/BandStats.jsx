@@ -14,7 +14,7 @@ export const BandStatsAPI = () => {
       .get("/api/bandstats.json")
       .then((response) => {
         console.log(response.data);
-        setData(response.data.bands); // Access the 'bands' array
+        setData(response.data.bands);
         setLoading(false);
       })
       .catch((error) => {
@@ -36,71 +36,77 @@ export const BandStatsAPI = () => {
   }
 
   return (
-    <div>
-      {data.map((item, index) => (
-        <Container key={index} className={styles["band-info-container"]}>
-          <Row>
-            <Col className="pt-1 ps-3">
-              <h1>{item.band_name}</h1>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} className={styles["center-image-xs"]}>
-              <img
-                onLoad={() => setLoading(false)}
-                src={item.album_cover}
-                alt={item.band_name}
-              />
-            </Col>
-            <Col>
+    <Container fluid className={styles["bandstats-container"]}>
+      <Row>
+        {data.map((item, index) => (
+          <Col xs={12} lg={6} md={6}>
+            <Container key={index} className={styles["band-info-container"]}>
               <Row>
-                <h2>Members:</h2>
-                <Col>
-                  <ul>
-                    {item.members.map((member, memberIndex) => (
-                      <li key={memberIndex}>{member.name}</li>
-                    ))}
-                  </ul>
+                <Col xs={12} className="pt-1 ps-3 text-center">
+                  <h1>{item.band_name}</h1>
                 </Col>
               </Row>
-            </Col>
-            <Col>
-              <h2>Stats:</h2>
-              <div>Year Formed: {item.formed_year}</div>
-              <div>Album Sales: {item.album_sales}</div>
-              <div>Studio Albums: {item.studio_albums}</div>
-              <div>Known Songs: {item.recorded_songs}</div>
-              <div>Known Revenue: {item.estimated_total_revenue}</div>
-            </Col>
-            <Col>
-              <h2>Albums:</h2>
-              <ul>
-                {item.albums &&
-                  item.albums.map((album, albumIndex) => (
-                    <li key={albumIndex}>{album.title}</li>
-                  ))}
-              </ul>
-            </Col>
-            <Col>
-              <h2>Highest Charted Song:</h2>
-              {item.highest_charted_song && (
-                <ul>
-                  <li>Title: {item.highest_charted_song.title}</li>
-                  <li>Album: {item.highest_charted_song.album}</li>
-                  <li>Year: {item.highest_charted_song.year}</li>
-                  {item.highest_charted_song.chart_peak && (
-                    <li>
-                      Chart Peak (USA):{" "}
-                      {item.highest_charted_song.chart_peak.US}
-                    </li>
+              <Row className="pb-3">
+                <Col className={styles["center-image-xs"]}>
+                  <img
+                    onLoad={() => setLoading(false)}
+                    src={item.album_cover}
+                    alt={item.band_name}
+                  />
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={6} lg={3}>
+                  <Row>
+                    <h2>Members:</h2>
+                    <Col>
+                      <ul>
+                        {item.members.map((member, memberIndex) => (
+                          <li key={memberIndex}>{member.name}</li>
+                        ))}
+                      </ul>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col xs={6} lg={3}>
+                  <h2>Stats:</h2>
+                  <div>Year Formed: {item.formed_year}</div>
+                  <div>Album Sales: {item.album_sales}</div>
+                  <div>Studio Albums: {item.studio_albums}</div>
+                  <div>Known Songs: {item.recorded_songs}</div>
+                  <div>Known Revenue: {item.estimated_total_revenue}</div>
+                </Col>
+                <Col xs={6} lg={3}>
+                  <h2>Albums:</h2>
+                  <ul>
+                    {item.albums &&
+                      item.albums.map((album, albumIndex) => (
+                        <li key={albumIndex}>{album.title}</li>
+                      ))}
+                  </ul>
+                </Col>
+                <Col xs={6} lg={3}>
+                  <h2>Highest Charted Song:</h2>
+                  {item.highest_charted_song && (
+                    <ul>
+                      <li>Title: {item.highest_charted_song.title}</li>
+                      <li>Album: {item.highest_charted_song.album}</li>
+                      <li>Year: {item.highest_charted_song.year}</li>
+                      {item.highest_charted_song.chart_peak && (
+                        <li>
+                          Chart Peak (USA):{" "}
+                          {item.highest_charted_song.chart_peak.US}
+                        </li>
+                      )}
+                    </ul>
                   )}
-                </ul>
-              )}
-            </Col>
-          </Row>
-        </Container>
-      ))}
-    </div>
+                </Col>
+              </Row>
+            </Container>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 

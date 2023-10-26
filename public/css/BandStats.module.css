@@ -1,37 +1,32 @@
-.band-info-container {
+.bandstats-container .band-info-container {
   background-image: url("../images/wireBG.jpg");
   background-size: cover;
   color: #fff;
-  font-family: monospace;
   padding: 1rem;
   border-radius: 1rem;
   margin: 1rem auto;
   box-shadow: rgba(0, 0, 0, 0.75) 3px 10px 10px 0px, black 0px 0px 0px 1px; }
-  .band-info-container .band-img {
+  .bandstats-container .band-info-container .band-img {
     padding-bottom: 1rem; }
-  .band-info-container h1 {
+  .bandstats-container .band-info-container h1 {
     font-family: 'Deathrock';
     font-size: 4rem; }
-  .band-info-container h2 {
+  .bandstats-container .band-info-container h2 {
     font-family: 'DeathRock';
-    font-size: 4rem; }
-  .band-info-container p {
+    font-size: 2rem; }
+  .bandstats-container .band-info-container p {
     font-size: 1rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-left: 0; }
-  .band-info-container ul {
+  .bandstats-container .band-info-container ul {
     padding-left: 1rem; }
-  .band-info-container .p-card {
+  .bandstats-container .band-info-container .p-card {
     padding: 1rem; }
-  .band-info-container .center-image-xs {
+  .bandstats-container .band-info-container .center-image-xs {
     display: flex;
     justify-content: center;
     align-items: center; }
 
-@media (max-width: 575.98px) {
-  .center-image-xs {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .band-info-container {
-    border-radius: 0; } }
+@media (min-width: 576px) {
+  .bandstats-container h1 {
+    color: #bc0505; } }
