@@ -62,7 +62,8 @@
     "start": "set PORT=3000 && concurrently \"npm run sass\" \"react-scripts start\"",
     "build": "react-scripts build",
     "includeApi": "cp -R ./src/api ./build/ && cp -R ./src/api ./public/",
-    "postbuild": "npm run includeApi",
+    "includeEmails": "cp -R ./src/emails ./build/ && cp -R ./src/emails ./public/",
+    "postbuild": "npm run includeApi && includeEmails",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sass": "node-sass --watch src/scss -o public/css"

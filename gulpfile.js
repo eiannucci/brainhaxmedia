@@ -14,6 +14,13 @@ function includeApi() {
     .pipe(gulp.dest('./build/api'));
 }
 
+function includeEmails() {
+  return gulp
+    .src('./emails/**/*')
+    .pipe(gulp.dest('./build/emails'));
+}
+
 exports.compileSass = compileSass;
 exports.includeApi = includeApi;
+exports.includeEmails = includeEmails;
 exports.default = gulp.series(compileSass);
